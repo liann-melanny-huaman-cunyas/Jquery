@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/jquery-3.6.4.js"></script>
+</head>
+<body class="bg-gray-200">
+<header class="bg-gradient-to-r from-cyan-300 to-blue-400 ">
+    <nav class=" flex justify-between mx-auto px-12 border-8 ">
+        <div class="flex justify-items-star">
+            <h3 class="text-xl tracking-wider italic font-bold  py-4">
+                BIBLIOTECA <br> GATO NEGRO
+            </h3>
+            <div class="w-12 h-12 mt-5 mx-3 rounded-full border-2 border-black">
+                <img class="w-8 h-8 mt-1.5 mx-2" src="https://i.pinimg.com/originals/3d/d7/03/3dd703b68cac557416952c886dcab72c.png" >
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div>
+    <h4>Libros</h4>
+    <input type="button" value="BUSCAR por autor">
+</div>
+<section class="flex flex-row">
+    <div class="basis-3/12 grid place-content-center">
+        <img class="w-20 h-32 " src="https://www.rae.es/sites/default/files/la_ciudad_y_los_perros.jpg" >
+    </div>
+    <div class="grid place-content-start basis-9/12 py-8">
+        <table class="table-auto text-left">
+            <tbody>
+                <tr>
+                    <th>Autor </th>
+                    <td> : MARIO VARGAS LLOSA</td>
+                </tr>
+                <tr>
+                    <th>Nombre del Libro </th>
+                    <td> : La ciudad y los perros</td>
+                </tr>
+                <tr>
+                    <th>Año de publicacion </th>
+                    <td> : 1963</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="flex flex-row">
+    <div class="basis-3/12 grid place-content-center">
+        <img class="w-20 h-32 " src="https://www.rae.es/sites/default/files/la_ciudad_y_los_perros.jpg" >
+    </div>
+    <div class="grid place-content-start basis-9/12 py-8">
+        <table class="table-auto text-left">
+            <tbody>
+                <tr>
+                    <th>Autor </th>
+                    <td> : MARIO VARGAS LLOSA</td>
+                </tr>
+                <tr>
+                    <th>Nombre del Libro </th>
+                    <td> : La ciudad y los perros</td>
+                </tr>
+                <tr>
+                    <th>Año de publicacion </th>
+                    <td> : 1963</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="flex flex-row">
+    <div class="basis-3/12 grid place-content-center">
+        <img class="w-20 h-32 " src="https://www.rae.es/sites/default/files/la_ciudad_y_los_perros.jpg" >
+    </div>
+    <div class="grid place-content-start basis-9/12 py-8">
+        <table class="table-auto text-left">
+            <tbody>
+                <tr>
+                    <th>Autor </th>
+                    <td> : MARIO VARGAS LLOSA</td>
+                </tr>
+                <tr>
+                    <th>Nombre del Libro </th>
+                    <td> : La ciudad y los perros</td>
+                </tr>
+                <tr>
+                    <th>Año de publicacion </th>
+                    <td> : 1963</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="flex flex-row">
+    <div class="basis-3/12 grid place-content-center">
+        <img class="w-20 h-32 " src="https://www.rae.es/sites/default/files/la_ciudad_y_los_perros.jpg" >
+    </div>
+    <div class="grid place-content-start basis-9/12 py-8">
+        <table class="table-auto text-left">
+            <tbody>
+                <tr>
+                    <th>Autor </th>
+                    <td> : MARIO VARGAS LLOSA</td>
+                </tr>
+                <tr>
+                    <th>Nombre del Libro </th>
+                    <td> : La ciudad y los perros</td>
+                </tr>
+                <tr>
+                    <th>Año de publicacion </th>
+                    <td> : 1963</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+<button id="ocultar">Ocultar</button>
+<button id="mostrar">Mostrar</button>
+<button class="h-10 px-6 font-semibold rounded-md bg-black text-white" type="submit">hola</button>
+<button id="verificar" class="bg-red-500">Verificar</button>
+
+<div>
+    <form action="">
+        <h3>
+            REGISTRAR LIBRO
+        </h3>
+        <label for="">Autor :</label>
+        <input type="text" >
+        <br>
+        <label for="">Libro :</label>
+        <input type="text">
+        <br>
+        <input type="submit" value="ENVIAR">
+    </form>
+
+</div>
+
+<script>
+    /*Teoria
+    -- Forma general --
+    $(documento).ready(function() {});
+
+    -- Forma abreviada --
+    $(function(){});
+    */
+
+    /* Eventos (hay más)
+        Dentro de la primera function()
+        -> click : click | dbclick | mouseenter | mouseleave | mouseup | hover
+        -> teclado : keypress | keydown | keyup
+        -> formulario : submit | change | focus | blur
+        -> document window : load | resize | scroll | unload
+
+    -- ESTRUCTURA ---
+    $(selector).evento(function(){
+        //contenido
+    });
+    */
+
+    /*Evento formulario
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("ul").hide();
+        });
+    });
+
+    $(document).ready(function(){
+        $(".libros").dblclick(function(){
+            $(this).hide();
+            alert("Se oculatara el libro con un doble click");
+        });
+    });
+
+    $(document).ready(function(){
+        $("#autor").mouseenter(function(){
+            $(this).hide();
+            alert("Se oculatara el autor con solo pasar el mouse");
+        });
+    });
+
+    $(document).ready(function(){
+        $("h3").mouseleave(function(){
+            $(this).hide();
+            alert("Se oculatara el titulo despues de pasar el mouse");
+        });
+    });*/
+
+    /*Evento para formulario
+
+    $(document).ready(function(){
+        $("input").focus(function(){
+            $(this).css("background-color","#7fffd4");
+        });
+    });
+
+    $(document).ready(function(){
+        $("input").blur(function(){
+            $(this).css("background-color","#000000");
+        });
+    });
+
+    */
+
+    /*Evento on (varios en uno)
+    $(document).ready(function(){
+        $("label").on({
+
+            //esta en su encima
+            mouseenter : function(){
+                $(this).css("background-color","#808080");
+            },
+
+            //le das click para arriba
+            mouseleave : function(){
+                $(this).css("background-color","#7fffd4");
+            },
+
+            //solo con click pero no se queda
+            click: function(){
+                $(this).css("background-color","#ff5733")
+            }
+
+        });
+    });
+    */
+
+    /* Efecto Hide | Show | Toggle
+
+    $(document).ready(function(){
+        $("selector").efecto(speed [low | fast | milliseconds],callback[function despues del efecto]);
+    });
+
+    $(document).ready(function(){
+        $("#ocultar").click(function(){
+            $("ul").hide("fast");
+        });
+    });
+
+    $(document).ready(function(){
+        $("#mostrar").click(function(){
+            $("ul").show("milliseconds");
+        });
+    });
+
+    $(document).ready(function(){
+        $("#verificar").click(function(){
+            $("ul").toggle("low");
+        });
+    });*/
+
+    /* Efecto*/
+</script>
+
+</body>
+</html>
