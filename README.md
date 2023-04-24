@@ -1,1 +1,1 @@
-#J�q�u�e�r�y�
+All about Jquery ; that is not dead 
